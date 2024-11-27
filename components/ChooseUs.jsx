@@ -1,18 +1,43 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const WhyChooseBarryTech = () => {
+	const [customerSatisfaction, setCustomerSatisfaction] = useState(0);
+	const [africaCoverage, setAfricaCoverage] = useState(0);
+	const [teamMembers, setTeamMembers] = useState(0);
+	const [companyGrowth, setCompanyGrowth] = useState(0);
+
 	useEffect(() => {
 		AOS.init();
+
+		// Function to animate a number up to a target
+		const animateNumber = (setter, target, increment, delay) => {
+			const step = () => {
+				setter((prev) => {
+					if (prev + increment >= target) {
+						return target; // Stop at the target
+					}
+					return prev + increment;
+				});
+			};
+			const interval = setInterval(() => {
+				step();
+				if (setter((prev) => prev) >= target) {
+					clearInterval(interval); // Clear interval when the target is reached
+				}
+			}, delay);
+		};
+
+		// Start animations
+		animateNumber(setCustomerSatisfaction, 99.9, 1, 10);
+		animateNumber(setAfricaCoverage, 10, 0.1, 50);
+		animateNumber(setTeamMembers, 10, 1, 10);
+		animateNumber(setCompanyGrowth, 300, 0.5, 10);
 	}, []);
+
 	const features = [
-		// {
-		// 	title: 'Custom Software Development',
-		// 	description:
-		// 		'We build tailored software solutions to address your business needs, ensuring efficiency, scalability, and a competitive edge.',
-		// },
 		{
 			title: 'IT Consulting & Support',
 			description:
@@ -33,11 +58,6 @@ const WhyChooseBarryTech = () => {
 			description:
 				'Secure your business operations with our robust networking solutions and proactive cybersecurity strategies.',
 		},
-		// {
-		// 	title: 'Website Design & Development',
-		// 	description:
-		// 		'Create a powerful online presence with our custom-built, responsive, and user-friendly websites.',
-		// },
 		{
 			title: 'Cloud Solutions & Hosting',
 			description:
@@ -51,27 +71,56 @@ const WhyChooseBarryTech = () => {
 	];
 
 	return (
-		<div className='bg-gray-50 py-12'>
-			<div className='container mx-auto px-10'>
+		<div className='bg-gray-50 py-16'>
+			<div className='container mx-auto px-6 md:px-10'>
 				<h2
-					className='text-3xl font-bold mb-8 text-center text-gray-800'
+					className='text-4xl font-extrabold mb-10 text-center text-gray-800'
 					data-aos='fade-up'>
-					Why Secure Advance Information?
+					Why Choose Barry Tech?
 				</h2>
+
 				<div
-					className='grid md:grid-cols-3 gap-8'
+					className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'
 					data-aos='fade-up'>
 					{features.map((feature, index) => (
 						<div
 							key={index}
-							className='bg-white px-6 py-10 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300'
-							data-aos='fade-up'>
-							<h3 className='text-xl font-bold mb-4 text-red-200'>
+							className='bg-white px-8 py-10 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center'>
+							<h3 className='text-xl font-bold text-red-500 mb-4'>
 								{feature.title}
 							</h3>
 							<p className='text-gray-600'>{feature.description}</p>
 						</div>
 					))}
+				</div>
+
+				<div
+					className='grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 items-center justify-center mx-auto'
+					data-aos='fade-up'>
+					<div className='bg-white px-6 py-10 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center'>
+						<h3 className='text-2xl font-bold text-red-500 mb-2'>
+							{customerSatisfaction ? customerSatisfaction.toFixed(1) : '0.0'}%
+						</h3>
+						<p className='text-gray-600'>Customer Satisfaction</p>
+					</div>
+					<div className='bg-white px-6 py-10 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center'>
+						<h3 className='text-2xl font-bold text-red-500 mb-2'>
+							{africaCoverage ? africaCoverage.toFixed(1) : '0.0'}+
+						</h3>
+						<p className='text-gray-600'>Nigeria Coverage</p>
+					</div>
+					<div className='bg-white px-6 py-10 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center'>
+						<h3 className='text-2xl font-bold text-red-500 mb-2'>
+							{teamMembers || 0}+
+						</h3>
+						<p className='text-gray-600'>Team Members</p>
+					</div>
+					<div className='bg-white px-6 py-10 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center'>
+						<h3 className='text-2xl font-bold text-red-500 mb-2'>
+							{companyGrowth || 0}%
+						</h3>
+						<p className='text-gray-600'>Company Growth</p>
+					</div>
 				</div>
 			</div>
 		</div>

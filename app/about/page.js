@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import React, { useState } from 'react';
 import {
 	FaPrint,
@@ -44,10 +45,10 @@ export default function About() {
 			<div className='bg-blue-50 p-6 rounded-lg'>
 				<h2 className='text-2xl font-bold mb-4 text-blue-800'>Our Mission</h2>
 				<p className='text-gray-700'>
-					Barry Tech is committed to empowering individuals and businesses
-					through innovative technology solutions. We strive to bridge the
-					digital divide by providing accessible, high-quality services that
-					enhance productivity, creativity, and digital literacy.
+					Secure Advance Information is committed to empowering individuals and
+					businesses through innovative technology solutions. We strive to
+					bridge the digital divide by providing accessible, high-quality
+					services that enhance productivity, creativity, and digital literacy.
 				</p>
 			</div>
 		),
@@ -108,7 +109,7 @@ export default function About() {
 	return (
 		<div className='container mx-auto px-4 py-8'>
 			<h1 className='text-4xl font-bold mb-8 text-center text-gray-800'>
-				About Barry Tech
+				About Secure Advance Information
 			</h1>
 
 			{/* Services Highlights */}
@@ -151,12 +152,14 @@ export default function About() {
 				</h2>
 				<p className='mb-6 text-gray-700'>
 					Whether you need computer services, printing, photography, or
-					training, Barry Tech is your trusted partner in technological
-					excellence.
+					training, Secured Advance Information is your trusted partner in
+					technological excellence.
 				</p>
-				<button className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all'>
+				<Link
+					href='/contact'
+					className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all'>
 					Contact Us Today
-				</button>
+				</Link>
 			</div>
 		</div>
 	);

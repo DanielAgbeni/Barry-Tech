@@ -140,7 +140,7 @@ const Footer = () => {
 				<div className='border-t border-gray-800 pt-8'>
 					<div className='flex flex-col md:flex-row justify-between items-center'>
 						<div className='text-sm text-gray-300 mb-4 md:mb-0'>
-							Copyright {now} © Secured Advance Information All rights reserved.
+							Copyright {now} © Secure Advance Information All rights reserved.
 						</div>
 						<div className='flex space-x-4 text-sm text-gray-300'>
 							<Link

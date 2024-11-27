@@ -45,7 +45,7 @@ const Navbar = () => {
 			className={`${
 				scroll ? 'fixed top-0 left-0 w-full z-50 shadow-lg' : 'relative'
 			} bg-gray-50 transition-all duration-700`}>
-			<div className='container mx-auto px-10 h-full'>
+			<div className='container mx-auto md:px-10 px-4 h-full'>
 				<div className='flex items-center justify-between h-20'>
 					{/* <h1 className='text-4xl font-semibold leading-tight tracking-tight text-red-500 hover:text-red-600'>
 						Barry <span className='text-blue-500'>Tech</span>
@@ -64,7 +64,7 @@ const Navbar = () => {
 								<li key={item.name}>
 									<Link
 										href={item.link}
-										className='relative group px-3 py-2 text-lg text-blue-700 font-medium 
+										className='relative group px-3 py-2 text-lg text-purple-800 font-medium 
 											transition-all duration-300 ease-in-out
 											hover:text-blue-200
 											after:content-[""] after:absolute after:bottom-0 after:left-0 

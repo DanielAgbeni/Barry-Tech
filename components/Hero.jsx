@@ -45,7 +45,7 @@ const Hero = () => {
 	}, []);
 
 	return (
-		<div className='relative flex flex-col md:flex-row items-center justify-center md:justify-between h-screen bg-gray-50 px-6 md:px-16 overflow-hidden'>
+		<div className='relative flex flex-col md:flex-row items-center justify-center md:justify-between h-screen bg-gray-50 px-10 md:px-16 overflow-hidden'>
 			{/* Image Section with Transition */}
 			<div className='relative w-full md:w-1/2 h-64 md:h-[70vh] overflow-hidden'>
 				<div

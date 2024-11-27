@@ -34,10 +34,10 @@ const Navbar = () => {
 
 	const navItems = [
 		{ name: 'Home', link: '/' },
-		{ name: 'About Us', link: '/#about' },
-		{ name: 'Products & Service', link: '/#products' },
-		{ name: 'Media', link: '/#media' },
-		{ name: 'Contact', link: '/#contact' },
+		{ name: 'About Us', link: '/about' },
+		{ name: 'Products & Service', link: '/products-and-services' },
+		{ name: 'Media', link: '/media' },
+		{ name: 'Contact', link: '/contact' },
 	];
 
 	return (

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import operate from '../public/img/img1.jpeg';
-import school from '../public/img/img2.jpeg';
+import school from '../public/img/IMG.jpg';
 import studio from '../public/img/img3.jpeg';
 
 const Hero = () => {
@@ -80,7 +80,7 @@ const Hero = () => {
 					{heroList[currentIndex].text}
 				</p>
 				<button
-					className='px-6 py-3 bg-blue-600 text-white rounded-lg shadow 
+					className='px-6 py-3 bg-blue-200 text-white rounded-lg shadow 
           hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 active:scale-95'>
 					Learn More
 				</button>
@@ -99,7 +99,7 @@ const Hero = () => {
 							}, 500);
 						}}
 						className={`w-3 h-3 rounded-full transition-all duration-300 
-              ${currentIndex === index ? 'bg-blue-600 w-6' : 'bg-gray-300'}`}
+              ${currentIndex === index ? 'bg-blue-200 w-6' : 'bg-gray-300'}`}
 					/>
 				))}
 			</div>

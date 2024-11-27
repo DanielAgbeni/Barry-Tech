@@ -64,11 +64,11 @@ const Navbar = () => {
 								<li key={item.name}>
 									<Link
 										href={item.link}
-										className='relative group px-3 py-2 text-lg text-gray-700 font-medium 
+										className='relative group px-3 py-2 text-lg text-blue-700 font-medium 
 											transition-all duration-300 ease-in-out
-											hover:text-blue-600
+											hover:text-blue-200
 											after:content-[""] after:absolute after:bottom-0 after:left-0 
-											after:w-0 after:h-0.5 after:bg-blue-600 
+											after:w-0 after:h-0.5 after:bg-blue-200 
 											after:transition-all after:duration-300 after:ease-in-out
 											hover:after:w-full'>
 										{item.name}
@@ -114,10 +114,10 @@ const Navbar = () => {
 													href={item.link}
 													className='block py-2 text-lg text-gray-800 
 														font-medium transition-colors duration-300 
-														hover:text-blue-600 
+														hover:text-blue-200 
 														relative 
 														after:content-[""] after:absolute after:bottom-0 after:left-0 
-														after:w-0 after:h-0.5 after:bg-blue-600 
+														after:w-0 after:h-0.5 after:bg-blue-200 
 														after:transition-all after:duration-300 after:ease-in-out
 														hover:after:w-full'
 													onClick={() => setIsMenu(false)}>

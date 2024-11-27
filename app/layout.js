@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-	title: 'Barry Tech',
+	title: 'Secure Advance Innovation',
 	description: 'Computer Solution Orimerunmu, Ogun State',
 };
 

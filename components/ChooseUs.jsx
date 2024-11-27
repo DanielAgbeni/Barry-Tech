@@ -64,9 +64,11 @@ const WhyChooseBarryTech = () => {
 					{features.map((feature, index) => (
 						<div
 							key={index}
-							className='bg-white px-6 py-10 rounded-lg shadow-md hover:shadow-xl transition-all duration-300'
+							className='bg-white px-6 py-10 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300'
 							data-aos='fade-up'>
-							<h3 className='text-xl font-bold mb-4'>{feature.title}</h3>
+							<h3 className='text-xl font-bold mb-4 text-red-200'>
+								{feature.title}
+							</h3>
 							<p className='text-gray-600'>{feature.description}</p>
 						</div>
 					))}

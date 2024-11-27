@@ -132,7 +132,7 @@ export default function About() {
 							key={tab}
 							className={`px-4 py-2 rounded-full transition-all duration-300 ${
 								activeTab === tab
-									? 'bg-blue-600 text-white'
+									? 'bg-blue-200 text-white'
 									: 'bg-gray-200 text-gray-700 hover:bg-blue-100'
 							}`}
 							onClick={() => setActiveTab(tab)}>

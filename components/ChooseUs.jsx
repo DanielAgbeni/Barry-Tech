@@ -56,7 +56,7 @@ const WhyChooseBarryTech = () => {
 				<h2
 					className='text-3xl font-bold mb-8 text-center text-gray-800'
 					data-aos='fade-up'>
-					Why Choose Barry Tech?
+					Why Secure Advance Information?
 				</h2>
 				<div
 					className='grid md:grid-cols-3 gap-8'

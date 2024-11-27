@@ -14,7 +14,7 @@ const Navbar = () => {
 		const handleScroll = () => {
 			const scrollTop =
 				window.pageYOffset || document.documentElement.scrollTop;
-			setScroll(scrollTop > 100);
+			setScroll(scrollTop > 300);
 		};
 
 		window.addEventListener('scroll', handleScroll);
@@ -47,10 +47,16 @@ const Navbar = () => {
 			} bg-gray-50 transition-all duration-700`}>
 			<div className='container mx-auto px-10 h-full'>
 				<div className='flex items-center justify-between h-20'>
-					<h1 className='text-4xl font-semibold leading-tight tracking-tight text-red-500 hover:text-red-600'>
+					{/* <h1 className='text-4xl font-semibold leading-tight tracking-tight text-red-500 hover:text-red-600'>
 						Barry <span className='text-blue-500'>Tech</span>
-					</h1>
-
+					</h1> */}
+					<Image
+						src='/img/logo.jpeg'
+						alt='Secure Advance Information'
+						width={160}
+						height={12}
+						className='cursor-pointer'
+					/>
 					{/* Desktop Navigation */}
 					<nav className='hidden md:block'>
 						<ul className='flex items-center space-x-4'>

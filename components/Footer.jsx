@@ -7,6 +7,7 @@ import {
 	FaInstagram,
 } from 'react-icons/fa';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
 	const now = new Date().getFullYear();
@@ -17,7 +18,12 @@ const Footer = () => {
 				<div className='grid grid-cols-1 md:grid-cols-4 gap-8 mb-8'>
 					{/* Company Info */}
 					<div className='space-y-4'>
-						<h2 className='text-2xl font-bold mb-4'>Barry Tech</h2>
+						<Image
+							src='/img/logo.jpeg'
+							alt='icon'
+							width={160}
+							height={12}
+						/>
 						<p className='text-sm text-gray-300'>
 							Leading tech solutions to help you create a business foundation
 							that meets your organization's needs
@@ -134,8 +140,7 @@ const Footer = () => {
 				<div className='border-t border-gray-800 pt-8'>
 					<div className='flex flex-col md:flex-row justify-between items-center'>
 						<div className='text-sm text-gray-300 mb-4 md:mb-0'>
-							Copyright {now} © Barry Tech Professional Services. All rights
-							reserved.
+							Copyright {now} © Secured Advance Information All rights reserved.
 						</div>
 						<div className='flex space-x-4 text-sm text-gray-300'>
 							<Link

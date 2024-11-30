@@ -44,16 +44,6 @@ const WhyChooseBarryTech = () => {
 				'Our team provides reliable IT consulting and support to streamline your operations and optimize your technology infrastructure.',
 		},
 		{
-			title: 'Printing Services',
-			description:
-				'From documents to large-scale posters, we deliver high-quality and affordable printing solutions for all your needs.',
-		},
-		{
-			title: 'Photo Studio & Graphics',
-			description:
-				'Capture your moments beautifully and enhance your visuals with our professional photography, editing, and graphic design services.',
-		},
-		{
 			title: 'Networking & Cybersecurity',
 			description:
 				'Secure your business operations with our robust networking solutions and proactive cybersecurity strategies.',
@@ -68,6 +58,21 @@ const WhyChooseBarryTech = () => {
 			description:
 				'Upskill yourself or your team with our expert-led training and certification programs, covering the latest technologies.',
 		},
+		// {
+		// 	title: 'Data Analytics & Insights',
+		// 	description:
+		// 		'Transform raw data into actionable insights with our advanced data analytics and visualization tools.',
+		// },
+		{
+			title: 'Custom Software Development',
+			description:
+				'Build tailored software solutions to meet your unique business requirements, ensuring efficiency and scalability.',
+		},
+		{
+			title: 'Technical Support & Maintenance',
+			description:
+				'Receive ongoing technical support and system maintenance to keep your operations running smoothly.',
+		},
 	];
 
 	return (
@@ -76,7 +81,7 @@ const WhyChooseBarryTech = () => {
 				<h2
 					className='text-4xl font-extrabold mb-10 text-center text-gray-800'
 					data-aos='fade-up'>
-					Why Choose Barry Tech?
+					Why Choose SAI?
 				</h2>
 
 				<div

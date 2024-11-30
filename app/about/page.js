@@ -7,6 +7,8 @@ import {
 	FaGraduationCap,
 	FaTrophy,
 	FaUsers,
+	FaShieldAlt,
+	FaCloud,
 } from 'react-icons/fa';
 import { FaComputerMouse } from 'react-icons/fa6';
 
@@ -21,22 +23,22 @@ export default function About() {
 				'Comprehensive hardware and software solutions, from repairs to system optimization.',
 		},
 		{
-			icon: <FaPrint className='text-4xl text-green-600' />,
-			title: 'Professional Printing',
-			description:
-				'High-quality printing services for businesses and individuals, with state-of-the-art technology.',
-		},
-		{
-			icon: <FaCamera className='text-4xl text-purple-600' />,
-			title: 'Photography',
-			description:
-				'Professional photography and graphic design services, capturing moments with precision.',
-		},
-		{
 			icon: <FaGraduationCap className='text-4xl text-red-600' />,
 			title: 'Computer Training',
 			description:
 				'Structured training programs from beginner to advanced levels, with certification support.',
+		},
+		{
+			icon: <FaShieldAlt className='text-4xl text-green-600' />,
+			title: 'Networking & Cybersecurity',
+			description:
+				'Secure and optimize your network infrastructure with robust solutions and proactive cybersecurity strategies.',
+		},
+		{
+			icon: <FaCloud className='text-4xl text-purple-600' />,
+			title: 'Cloud Solutions',
+			description:
+				'Reliable and scalable cloud services tailored to enhance performance and support your business growth.',
 		},
 	];
 
@@ -113,7 +115,8 @@ export default function About() {
 			</h1>
 
 			{/* Services Highlights */}
-			<div className='grid md:grid-cols-4 gap-6 mb-12'>
+			<div
+				className={`grid md:grid-cols-${serviceHighlights.length} gap-6 mb-12 place-items-center`}>
 				{serviceHighlights.map((service, index) => (
 					<div
 						key={index}
